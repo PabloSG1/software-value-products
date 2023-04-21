@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Products</title>
-    <link rel="stylesheet" href="/software-value-products/style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
 
 </head>
 
 <body>
     <header class="navigation">
-        <img src="/software-value-products/lupa1.png" alt="Lupa">
+        <img src="/IMG/lupa1.png" alt="Lupa">
         <h1>
             Consulta de Produtos
         </h1>
@@ -50,7 +50,7 @@
             }
 
             if (valueAtual < valueAnt) {
-                document.getElementById("resultado").innerHTML = ("O(a) " + product + "  Recebeu um desconto de R$" + Math.abs(resultado.toFixed(2)) + " em relação ao valor anterior, que Equivale a " + percentual.toFixed(2) + "%")
+                document.getElementById("resultado").innerHTML = ("O(a) " + product + "  Recebeu um desconto de R$" + Math.abs(resultado.toFixed(2)) + " em relação ao valor anterior, que Equivale a " + Math.abs(percentual.toFixed(2)) + "%")
             }
 
             if (valueAnt == valueAtual) {
