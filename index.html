@@ -45,11 +45,11 @@
 
             let percentual = (resultado / valueAnt) * 100;
 
-            if (valueAnt > valueAtual) {
+            if (valueAnt < valueAtual) {
                 document.getElementById("resultado").innerHTML = ("O(a) " + product + "  Sofreu um Aumento de R$" + Math.abs(resultado.toFixed(2)) + " em relação ao valor anterior, que Equivale a " + Math.abs(percentual.toFixed(2)) + "%")
             }
 
-            if (valueAnt < valueAtual) {
+            if (valueAtual < valueAnt) {
                 document.getElementById("resultado").innerHTML = ("O(a) " + product + "  Recebeu um desconto de R$" + Math.abs(resultado.toFixed(2)) + " em relação ao valor anterior, que Equivale a " + percentual.toFixed(2) + "%")
             }
 
