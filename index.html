@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Products</title>
-    <link rel="stylesheet" href="/software-value-products/style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
 
 </head>
 
 <body>
     <header class="navigation">
-        <img src="/software-value-products/lupa1.png" alt="Lupa">
+        <img src="/IMG/lupa1.png" alt="Lupa">
         <h1>
             Consulta de Produtos
         </h1>
@@ -38,24 +38,22 @@
     <script>
         function calculo() {
             product = document.querySelector("#produto").value
-            value1 = document.querySelector("#valor1").value
-            value2 = document.querySelector("#valor2").value
+            valueAnt = document.querySelector("#valor1").value
+            valueAtual = document.querySelector("#valor2").value
 
-            let resultado = value1 - value2;
+            let resultado = valueAnt - valueAtual;
 
-            let percentual = (resultado / value1) * 100;
+            let percentual = (resultado / valueAnt) * 100;
 
-            if (value1 < value2) {
-
-
-                document.getElementById("resultado").innerHTML = ("O(a) " + product + "  Recebeu um desconto de R$" + Math.abs(resultado.toFixed(2)) + " em relação ao valor anterior, que Equivale a " + percentual.toFixed(2) + "%")
-
-            } else {
+            if (valueAnt > valueAtual) {
                 document.getElementById("resultado").innerHTML = ("O(a) " + product + "  Sofreu um Aumento de R$" + Math.abs(resultado.toFixed(2)) + " em relação ao valor anterior, que Equivale a " + Math.abs(percentual.toFixed(2)) + "%")
-
             }
 
-            if (value1 == value2) {
+            if (valueAnt < valueAtual) {
+                document.getElementById("resultado").innerHTML = ("O(a) " + product + "  Recebeu um desconto de R$" + Math.abs(resultado.toFixed(2)) + " em relação ao valor anterior, que Equivale a " + percentual.toFixed(2) + "%")
+            }
+
+            if (valueAnt == valueAtual) {
                 document.getElementById("resultado").innerHTML = ("Não Houve alteração no Valor")
             }
 
